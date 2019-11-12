@@ -5,12 +5,12 @@ services:
   postgresql:
     image: postgres:12.0-alpine
     volumes:
-      - ./data:/data
+      - ./data:/postgresql/data
     ports:
-      - '8080:8080'
+      - '5432:5432'
     environment:
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=12345
       - POSTGRES_DB=app
-      - DB_PORT=tcp://app:9999
+
 
